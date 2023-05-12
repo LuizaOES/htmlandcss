@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html Lang="en">
+
+<head>
+  <!-- Boorstrap 4 -->
+  <style class=background-color: #ededed></style>
+  <meta charset="UTF-8">
+  <style class=background-color: #ededed></style>
+  <meta name="viewport" content="width=device-width, intial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tela de Cadastro</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e787fc2c3a.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  </link>
+
+  <!-- Definições de estilo, cor e alinhamento -->
+  <style>
+    .posicaoCarrinho {
+      position: relative;
+      left: 180px;
+    }
+
+    .posicaoTelaCadastro {
+      position: relative;
+      left: 280px;
+    }
+
+    .body {
+      background-color: #ededed;
+    }
+
+    .fundoVermelho {
+      background-color: rgb(121, 17, 43);
+    }
+
+    .fundoBranco {
+      background-color: white;
+    }
+
+    .textoBranco {
+      color: white;
+    }
+  </style>
+</head>
+
+<body style="background-color: #ededed;">
+  <div class="position-relative overflow-hidden p-5 pt-md-5 m-md-3 fundoVermelho">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-8 font-weight-normal textoBranco">Finalize sua compra!</h1>
+      <p class="lead font-weight-normal textoBranco">Estamos felizes que chegou até aqui. Finalize sua compra com
+        segurança.</p>
+      <a class="btn btn btn-light" href="#">Adicione mais itens</a>
+    </div>
+    <div class="product-device box-shadow d-none d-md-block fundoSessoes"></div>
+    <div class="product-device product-device-2 box-shadow d-none d-md-block fundoSessoes"></div>
+  </div>
+  <div class="row body">
+    <div class="col-md-2 order-md-5 mb-4 posicaoCarrinho body">
+      <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Carrinho</span>
+        <span class="badge badge-secondary badge-pill"></span>
+      </h4>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Primeira produto</h6>
+            <small class="text-muted">Descrição</small>
+          </div>
+          <span class="text-muted">R$</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Segundo produto</h6>
+            <small class="text-muted">Descrição</small>
+          </div>
+          <span class="text-muted">R$</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Terceiro produto</h6>
+            <small class="text-muted">Descriçãoo</small>
+          </div>
+          <span class="text-muted">R$</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+            <h6 class="my-0">Cupom de Desconto</h6>
+            <small></small>
+          </div>
+          <span class="text-success">-R$</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total (BRL)</span>
+          <strong>R$</strong>
+        </li>
+      </ul>
+
+      <form class="card p-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Código promocional">
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-danger">Aplicar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6 order-md-6 posicaoTelaCadastro body">
+      <h4 class="mb-3">Endereço de cobrança</h4>
+      <form class="needs-validation" novalidate="">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="primeiroNome">Nome</label>
+            <input type="text" class="form-control" id="primeiroNome" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              .
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" class="form-control" id="sobrenome" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email <span class="text-muted">(Opcional)</span></label>
+          <input type="email" class="form-control" id="email" placeholder="fulano@exemplo.com">
+          <div class="invalid-feedback">
+            Por favor, insira seu endereço de e-mail.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="endereco">Endereço</label>
+          <input type="text" class="form-control" id="endereco" placeholder="Rua dos bobos, nº 0" required="">
+          <div class="invalid-feedback">
+            Por favor, insira o endereço para entrega.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="endereco2">Complemento<span class="text-muted">(Opcional)</span></label>
+          <input type="text" class="form-control" id="endereco2" placeholder="Apartamento ou casa">
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="pais">País</label>
+            <select class="custom-select d-block w-100" id="pais" required="">
+              <option value="">Escolha...</option>
+              <option>Brasil</option>
+            </select>
+            <div class="invalid-feedback">
+              Por favor, escolha um país válido.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="estado">Estado</label>
+            <select class="custom-select d-block w-100" id="estado" required="">
+              <option value="">Escolha...</option>
+              <option>Acre</option>
+            </select>
+            <div class="invalid-feedback">
+              Por favor, insira um estado válido.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control" id="cep" placeholder="" required="">
+            <div class="invalid-feedback">
+              É obrigatório inserir um CEP.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="mesmo-endereco">
+          <label class="custom-control-label" for="mesmo-endereco">Definir como endereço padrão para entrega.
+            cobrança.</label>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="salvar-info">
+          <label class="custom-control-label" for="salvar-info">Definir como cartão padrão para cobranças.</label>
+        </div>
+        <hr class="mb-4">
+
+        <h4 class="mb-3">Pagamento</h4>
+
+        <div class="d-block my-3">
+          <div class="custom-control custom-radio">
+            <input id="credito" name="paymentMethod" type="radio" class="custom-control-input" checked="" required="">
+            <label class="custom-control-label" for="credito">Cartão de crédito</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="debito" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="debito">Cartão de débito</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required="">
+            <label class="custom-control-label" for="paypal">PayPal</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="cc-nome">Nome no cartão</label>
+            <input type="text" class="form-control" id="cc-nome" placeholder="" required="">
+            <small class="text-muted">Nome completo, como mostrado no cartão.</small>
+            <div class="invalid-feedback">
+              O nome que está no cartão é obrigatório.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cc-numero">Número do cartão de crédito</label>
+            <input type="text" class="form-control" id="cc-numero" placeholder="" required="">
+            <div class="invalid-feedback">
+              O número do cartão de crédito é obrigatório.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <label for="cc-expiracao">Data de expiração</label>
+            <input type="text" class="form-control" id="cc-expiracao" placeholder="" required="">
+            <div class="invalid-feedback">
+              Data de expiração é obrigatória.
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="cc-cvv">CVV</label>
+            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+            <div class="invalid-feedback">
+              Código de segurança é obrigatório.
+            </div>
+          </div>
+        </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn btn-danger btn-block" type="submit">Finalize seu pedido</button>
+      </form>
+    </div>
+  </div>
+  <!--Footer-->
+  <p class="text-center"><br></br><br></br><br></br><br></br>Copyright 2023 - Portólio de Luiza Oliveira<br></br></p>
+</body>
+
+
+</html>
